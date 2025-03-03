@@ -1,0 +1,25 @@
+.logo{
+    width: 100px;
+}
+.header{
+    text-align: center;
+}
+
+nav li{
+    display: inline;
+    font-size: 30px;
+    padding-left: 60px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav  a:hover{
+    text-decoration: underline;
+}
+
+.Welcome{
+    background-color: rgb(192, 249, 253);
+}
