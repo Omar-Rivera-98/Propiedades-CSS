@@ -1,8 +1,31 @@
+@font-face {
+    font-family: 'Lobster_Regular';
+    src: url('../fonts/Lobster-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'MadimiOne_Regular';
+    src: url('../fonts/MadimiOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
 .logo{
     width: 100px;
+    margin-left: 60px;
 }
 .header{
     text-align: center;
+}
+
+.header{
+    background: linear-gradient(black,white);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
 }
 
 nav li{
@@ -13,11 +36,35 @@ nav li{
 
 nav a{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
+    font-family: Lobster_Regular;
 }
 
 nav  a:hover{
-    text-decoration: underline;
+    font-family: MadimiOne_Regular;
+    background: linear-gradient(to right, #00ff62, 
+    #cc00ff, #00a2ff, #ffe600); 
+   -webkit-text-fill-color: transparent; /*Es el color (quita el delineado) se deja en transparente para que se aplique el color personalizado*/
+    -webkit-background-clip: text; /*Si le soy sincero no se porque da error pero funciona realmente*/ /*Sirve para que tome el texto como degradado*/
+    position: relative;
+   /* text-decoration:underline;*/ /*Se hizo esto  porque le añadi un degradado al texto*/
+}
+
+hr{
+    background:linear-gradient(black,white);
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav a:hover::after { /*Una propiedad para simular el subrayado*/
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta la posición vertical según sea necesario */
+    width: 100%;
+    height: 2px; /* Ajusta el grosor del subrayado según sea necesario */
+    background: linear-gradient(to right, #00ff62, #cc00ff, #00a2ff, #ffe600);
 }
 
 .Welcome{
@@ -29,9 +76,12 @@ main{
 }
 .Welcome{
     padding: 20px; /*Hacemos un espacio alrededor de 20px alrededor del contenido*/
-    background-color: darkblue;/*Color al fondo del DIV*/
+   /* background-color: darkblue;*/ /*Color al fondo del DIV*/ /*Lo anularemos ya que usaremos un degradado*/
+    background: linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0),rgb(255, 255, 255));/*Degradado, sin más para el fondo claro*/
+    background-repeat: no-repeat;
     text-align: center;/*Alineamos el texto al centro*/
-    color: white;/*Colocamos color blanco al texto*/
+    color: rgb(255, 255, 255);/*Colocamos color negro al texto*/
+    font-family: MadimiOne_Regular;
 }
 
 body{
@@ -46,10 +96,15 @@ body{
 p{
     font-size: 18px;/*Aumenta el tamaño de la letra a 18px*/
     line-height: 1.4;/*Aumentar el espacio entre lineas a 1.4 puntos*/
+    font-family: MadimiOne_Regular;
 }
 .Welcome h1, .courses h2{
-    color: #005A9C;
+    color: #ffffff;
 }
+h3{
+    font-family: MadimiOne_Regular;
+}
+
 .infoCurso img{
     width: 225px;/* Ancho de la imagen*/
     float: left; /* Colocamos la imagen a izquierda */
@@ -58,13 +113,44 @@ p{
 .infoCurso {
     overflow: auto; /*Hace que la imagen  no se salga del DIV, sino que  este se ajuste  a la imagen*/
     margin-bottom:  30px /* Da un espacio abajo del DIV de cada uno*/;
+    background: linear-gradient(white,black);
+}
+.infoCurso hr{
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    font-family: MadimiOne_Regular;
 }
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: lightgray;
-}
-.footerad {
+    color: white;
+    background: linear-gradient(white,black);
 
-    background:linear-gradient(rgb(0, 255, 0),white)
+}
+img{
+    border-radius: 20px;
+}
+body footer{
+    background:linear-gradient(White,rgb(167, 167, 167),rgba(0, 0, 0, 0.144));
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+}
+.courses{
+    background: linear-gradient(black,white);
+    color: white;
+    text-align: center;
+}
+.maps{
+    width: 900px;
+    margin-left: 500px;
+}
+
+.maps2{
+    background: linear-gradient(white,black);
 }
